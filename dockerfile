@@ -15,12 +15,6 @@ COPY . /var/www/html/
 # Berechtigungen setzen
 RUN chown -R www-data:www-data /var/www/html
 
-# Umgebungsvariablen mit deiner Postgres-Connection setzen
-ENV DEDALO_DB_HOST=fullstack/mattermostsartirgeneral-fullstack-cpp49l
-ENV DEDALO_DB_NAME=dedalo_db
-ENV DEDALO_DB_USER=dedalo_user
-ENV DEDALO_DB_PASSWORD=your_secure_password   # (Anpassen!)
-
 EXPOSE 80
 
 CMD ["apache2-foreground"]
